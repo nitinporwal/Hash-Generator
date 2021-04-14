@@ -6,7 +6,9 @@
     <string name="text_here">Text here...</string>
     <string name="generate">Generate</string>
     <string name="clear">Clear</string>
-    
+    <string name="copy">Copy</string>
+    <string name="copied">Copied!</string>
+
     <string-array name="hash_algorithms">
         <item>SHA-256</item>
         <item>SHA-512</item>

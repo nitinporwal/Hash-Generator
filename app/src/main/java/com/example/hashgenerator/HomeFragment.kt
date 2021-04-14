@@ -50,8 +50,7 @@ class HomeFragment : Fragment() {
         else {
             lifecycleScope.launch {
                 applyAnimation()
-                getHashData()
-                navigateToSuccess()
+                navigateToSuccess(getHashData())
             }
         }
     }
@@ -84,8 +83,9 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun navigateToSuccess() {
-        findNavController().navigate(R.id.action_homeFragment_to_successFragment)
+    private fun navigateToSuccess(hash: String) {
+        val directions = HomeFragmentDirections.actionHomeFragmentToSuccessFragment(hash)
+        findNavController().navigate(directions)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
